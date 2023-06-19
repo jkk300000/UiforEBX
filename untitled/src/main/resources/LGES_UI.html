@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <script src="./jquery.slim.min.js"></script>
+    <script src="./popper.min.js"></script>
+    <script src="./bootstrap.bundle.in.js"></script>
+
+</head>
+<script type="text/javascript" src="./jquery.min.js"></script>
+<script type="text/javascript">
+</head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+
+let iframeId = 'iframe';
+let hostname = 'localhost';
+let port = '8080';
+let id = 'admin';
+let password = 'admin';
+let rootPath = '/ebx/?onwbpID=iebx-manager&branch=LGES-MMD&instance=LGES_MMD&xpath=%2Froot%2F';
+let rediretAction = '&redirect=%2Febx-manager%2Fwww%2Fcommon%2Fhtml%2Febx_closeUniqueModal.html&closeButton=cross" width="1870" height="600"></iframe>';
+
+function iframeTable(clicked_id) { <!--clicked_id 클릭한 버튼의 id 값이 파라미터로 넘어오게하는 값-->
+
+	let url = '<iframe id=iframeId src="http://' + hostname + ':' + port + rootPath + clicked_id + '&login=' + id + '&password=' + password + rediretAction;
+
+	if(document.getElementById(clicked_id) ) {
+		$('#iframe').html(url);
+    }
+}
+
+</script>
+
+<style>
+
+#header {
+
+    background-color: #4D4D4D;
+
+}
+
+<!--
+#nav {
+
+    width: 200px;
+    position: absolute;
+
+}
+-->
+
+
+main {
+
+    height: 100%;
+    width: 100%;
+    background-color: #8A8D8F;
+    position: absolute;
+
+
+
+}
+
+#footer{
+
+  background-color: blue
+  position: absolute;
+
+}
+
+
+
+}
+
+#menu {
+    margin-left: 100px;
+
+}
+
+#iframe {
+
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 50px;
+
+    background-color: #4D4D4D;
+    z-index:1;
+
+}
+
+#subTitle {
+    height: 100px;
+    background-color: white
+    position:absolute;
+
+}
+
+.container {
+    float: left;
+    margin-top: 50px;
+
+    background-color:grey
+}
+
+
+</style>
+<body>
+    <header id="header">
+
+    <div id="LGtitle">
+        <p id="title"> <span style="color:#E1537F; font-size:30px ">M</span><span style="color:white; font-size:15px">MD</span> </p>
+    </div>
+    <div id="menu">
+
+        <div class="btn-group">
+        <button type="button" style="background-color:#4D4D4D; border: 2px solid #4D4D4D"  class="btn btn-primary dropdown-toggle" data-toggle="dropdown">공장관리</button>
+        <div class="dropdown-menu">
+        <a class="dropdown-item"  id="PLANT" onclick="iframeTable(this.id)">PLANT</a>
+        <a class="dropdown-item" href="#">Smartphone</a>
+        </div>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" style="background-color:#4D4D4D; border: 2px solid #4D4D4D" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">제품관리</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" >Sony</a>
+                <a class="dropdown-item" href="#">Smartphone</a>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" style="background-color:#4D4D4D; border: 2px solid #4D4D4D" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">공정관리</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Tablet</a>
+                <a class="dropdown-item" href="#">Smartphone</a>
+            </div>
+        </div>
+
+
+        <div class="btn-group">
+            <button type="button" style="background-color:#4D4D4D; border: 2px solid #4D4D4D" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">품질관리</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Tablet</a>
+                <a class="dropdown-item" href="#">Smartphone</a>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" style="background-color:#4D4D4D; border: 2px solid #4D4D4D" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">설비관리</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" id="EQPT" onclick="iframeTable(this.id)">EQPT</a> <!--this.id/현재 클래스 태그의 id 값을 iframeTable()로 넘겨줌-->
+                <a class="dropdown-item" id="ALARM" onclick="iframeTable(this.id)">EQPTALARM</a>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" style="background-color:#4D4D4D; border: 2px solid #4D4D4D" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">포장/출하</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" id="button4"> naver</a>
+                <a class="dropdown-item" href="#">Smartphone</a>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" style="background-color:#4D4D4D; border: 2px solid #4D4D4D" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">활성화</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Tablet</a>
+                <a class="dropdown-item" href="#">Smartphone</a>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button type="button"  style="background-color:#4D4D4D; border: 2px solid #4D4D4D" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">라벨통합관리</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Tablet</a>
+                <a class="dropdown-item" href="#">Smartphone</a>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" style="background-color:#4D4D4D; border: 2px solid #4D4D4D"  class="btn btn-primary dropdown-toggle" data-toggle="dropdown">검토관리</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Tablet</a>
+                <a class="dropdown-item" href="#">Smartphone</a>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" style="background-color:#4D4D4D; border: 2px solid #4D4D4D" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">물류관리(RTD)</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Tablet</a>
+                <a class="dropdown-item" href="#">Smartphone</a>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" style="background-color:#4D4D4D; border: 2px solid #4D4D4D" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">공통정보</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Tablet</a>
+                <a class="dropdown-item" href="#">Smartphone</a>
+            </div>
+        </div>
+
+
+        <div class="btn-group">
+            <button type="button"  style="background-color:#4D4D4D; border: 2px solid #4D4D4D" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">시스템관리</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Tablet</a>
+                <a class="dropdown-item" href="#">Smartphone</a>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" style="background-color:#4D4D4D; border: 2px solid #4D4D4D" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">목표관리</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Tablet</a>
+                <a class="dropdown-item" href="#">Smartphone</a>
+            </div>
+        </div>
+
+    </div>
+        <div id="subTitle" style="background-color:white">
+
+        </div>
+    </header>
+    <!--
+   <nav id="nav">
+          <div class="container">
+              <ul class="nav flex-column">
+                  <li class="nav-item">
+
+                      <p class="nav-link dropdown-toggle" data-toggle="dropdown">Plant:  <a href="#">Dropdown</a></p>
+
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Link 1</a>
+                          <a class="dropdown-item" href="#">Link 2</a>
+                          <a class="dropdown-item" href="#">Link 3</a>
+                      </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <p class="nav-link dropdown-toggle" data-toggle="dropdown">Plant:  <a href="#">Dropdown</a></p>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Link 1</a>
+                          <a class="dropdown-item" href="#">Link 2</a>
+                          <a class="dropdown-item" href="#">Link 3</a>
+                      </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <p class="nav-link dropdown-toggle" data-toggle="dropdown">Plant:  <a href="#">Dropdown</a></p>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Link 1</a>
+                          <a class="dropdown-item" href="#">Link 2</a>
+                          <a class="dropdown-item" href="#">Link 3</a>
+                      </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <p class="nav-link dropdown-toggle" data-toggle="dropdown">Plant:  <a href="#">Dropdown</a></p>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Link 1</a>
+                          <a class="dropdown-item" href="#">Link 2</a>
+                          <a class="dropdown-item" href="#">Link 3</a>
+                      </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <p class="nav-link dropdown-toggle" data-toggle="dropdown">Plant:  <a href="#">Dropdown</a></p>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Link 1</a>
+                          <a class="dropdown-item" href="#">Link 2</a>
+                          <a class="dropdown-item" href="#">Link 3</a>
+                      </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <p class="nav-link dropdown-toggle" data-toggle="dropdown">Plant:  <a href="#">Dropdown</a></p>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Link 1</a>
+                          <a class="dropdown-item" href="#">Link 2</a>
+                          <a class="dropdown-item" href="#">Link 3</a>
+                      </div>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                      <p class="nav-link dropdown-toggle" data-toggle="dropdown">Plant:  <a href="#">Dropdown</a></p>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Link 1</a>
+                          <a class="dropdown-item" href="#">Link 2</a>
+                          <a class="dropdown-item" href="#">Link 3</a>
+                      </div>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                      <p class="nav-link dropdown-toggle" data-toggle="dropdown">Plant:  <a href="#">Dropdown</a></p>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Link 1</a>
+                          <a class="dropdown-item" href="#">Link 2</a>
+                          <a class="dropdown-item" href="#">Link 3</a>
+                      </div>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                      <p class="nav-link dropdown-toggle" data-toggle="dropdown">Plant:  <a href="#">Dropdown</a></p>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Link 1</a>
+                          <a class="dropdown-item" href="#">Link 2</a>
+                          <a class="dropdown-item" href="#">Link 3</a>
+                      </div>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                      <p class="nav-link dropdown-toggle" data-toggle="dropdown">Plant:  <a href="#">Dropdown</a></p>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Link 1</a>
+                          <a class="dropdown-item" href="#">Link 2</a>
+                          <a class="dropdown-item" href="#">Link 3</a>
+                      </div>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                      <p class="nav-link dropdown-toggle" data-toggle="dropdown">Plant:  <a href="#">Dropdown</a></p>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Link 1</a>
+                          <a class="dropdown-item" href="#">Link 2</a>
+                          <a class="dropdown-item" href="#">Link 3</a>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+      -->
+      <main id="main">
+      </main>
+
+     <div id="iframe"></div>
+
+<!--
+  <footer id="footer">
+
+      <div id="footerspace">
+
+      </div>
+
+  </footer>
+-->
+
+  </body>
+  </html>
